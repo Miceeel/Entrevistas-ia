@@ -1,3 +1,4 @@
+# Workflow para compilar y desplegar un proyecto de Vite en GitHub Pages
 name: Deploy Vite Project to Pages
 
 on:
@@ -32,9 +33,6 @@ jobs:
 
       - name: Build project
         run: npm run build
-        env:
-          # Si necesitas tu API Key durante el build, ponla aquí
-          VITE_GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -42,7 +40,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # IMPORTANTE: Vite guarda todo lo listo para web en la carpeta 'dist'
+          # Vite genera los archivos listos para la web en 'dist'
           path: './dist'
 
       - name: Deploy to GitHub Pages
