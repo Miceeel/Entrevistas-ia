@@ -1,0 +1,5 @@
+{
+  "name": "EntrevistAI",
+  "description": "Domina tu próxima entrevista de trabajo con inteligencia artificial. Practica con avatares de IA y recibe feedback instantáneo.",
+  "requestFramePermissions": ["camera", "microphone"]
+}
